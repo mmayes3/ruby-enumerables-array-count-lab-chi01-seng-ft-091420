@@ -1,6 +1,10 @@
 def count_strings(array)
+  num = 1
   array.count do |element|
-    element.class == String
+    if element.class == String
+      puts "#{num}. #{element}"
+      num += 1
+    end
   end
 end
 
@@ -11,4 +15,4 @@ def count_empty_strings(array)
   # Return the total number of EMPTY strings in the provided array using the count enumerable
 end
 
-puts count_empty_strings(array = [ "", "Hello", 4, [], "", "" ])
+count_strings(array = [ "One", "two", 4, [], "three", "four" ])
